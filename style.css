@@ -4,7 +4,7 @@
     font-weight: 400;
     line-height: 150%;
     color:#1e5ba5;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 body {
@@ -19,14 +19,14 @@ header {
 
 .container {
     display: flex;
-    align-items: center;
     justify-content: space-around;
     margin-left: 1%;
     width: auto;
+    height: 100%;
 }
 
 .container-box-input {
-    height: 50%;
+    height: 100%;
     margin-top: 4%;
     margin-right: 3%;
     margin-bottom: 0;
@@ -47,24 +47,30 @@ header {
 
 .container-box-input-buttons {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin-top: 1%;
+    flex-basis: auto;
 }
 
 .container-box-input-buttons-btencriptar {
     background-color: #1e5ba5;
     color: #FFF;
+    width: 200px;
+    height: 40px;
 }
 
 .container-box-input-buttons-btdesencriptar {
     background-color: #F3F5FC;
     border-color: #1e5ba5;
+    width: 200px;
+    height: 40px;
 }
 
 .container-box-mensagem {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     margin-top: 0;
     width: auto;
 }
@@ -76,15 +82,18 @@ header {
     background-repeat: no-repeat;
     background-position: 18px;
     background-size: 200px;
+    height: 100%;
 }
 
-#container-box-btcopiar {
+#container-box-mensagem-button-btcopiar {
     background-color: #F3F5FC;
     border-color: #1e5ba5;
+    width: 200px;
+    height: 40px;
 }
 
 /*parte mobile*/
-@media(max-width: 768px) {
+@media screen and (max-width: 768px) {
 
     .container {
         display: flex;
@@ -112,5 +121,6 @@ header {
 
     .container-box-mensagem-copiar {
         padding: 10%;
+        min-height: 250px;
     }
 }
