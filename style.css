@@ -1,67 +1,76 @@
+:root {
+    --off-white: #F2F2F2;
+    --roxo: #7030A0;
+    --lilas: #E2CBF1;
+    --cinza-claro: #B0B0B0;
+    --cinza-escuro: #4D4D4D;
+    --azul-escuro: #0A3871;
+}
+
 * {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 150%;
-    color:#1e5ba5;
+    color: var(--azul-escuro);
     border-radius: 15px;
 }
 
 body {
-    background-color: #F3F5FC;
+    background-color: var(--lilas);
 }
 
 header {
     float: left;
-    margin: 10px;
-    margin-left: 40px;
+    margin: 0.5rem;
+    margin-left: 1.5rem;
 }
 
 .container {
     display: flex;
     justify-content: space-around;
-    margin-left: 1%;
+    margin-left: 0.1rem;
     width: auto;
     height: 100%;
 }
 
 .container-box-input {
     height: 100%;
-    margin-top: 4%;
-    margin-right: 3%;
+    margin-top: 2.5rem;
+    margin-right: 0.4rem;
     margin-bottom: 0;
 }
 
 .container-box-input-texto {
     margin-top: 0;
-    padding: 30px;
-    background-color: #F3F5FC;
+    padding: 2.3rem;
+    background-color: var(--lilas);
     border: none;
 }
 
 #container-box-input-apenas {
     font-weight: 100;
     font-size: small;
-    color: #B0B0B0;
+    color: var(--cinza-escuro);
 }
 
 .container-box-input-buttons {
     display: flex;
     justify-content: space-around;
-    margin-top: 1%;
+    margin-top: 0.1rem;
     flex-basis: auto;
 }
 
 .container-box-input-buttons-btencriptar {
-    background-color: #1e5ba5;
-    color: #FFF;
+    background-color: var(--roxo);
+    color: var(--off-white);
     width: 200px;
     height: 40px;
 }
 
 .container-box-input-buttons-btdesencriptar {
-    background-color: #F3F5FC;
-    border-color: #1e5ba5;
+    background-color: var(--off-white);
+    border-color: var(--roxo);
     width: 200px;
     height: 40px;
 }
@@ -76,8 +85,9 @@ header {
 }
 
 .container-box-mensagem-copiar {
-    padding: 30px;
+    padding: 2rem;
     border: none;
+    background-color: var(--off-white);
     background-image: url("/images/nenhuma-mensagem.png");
     background-repeat: no-repeat;
     background-position: 18px;
@@ -86,14 +96,25 @@ header {
 }
 
 #container-box-mensagem-button-btcopiar {
-    background-color: #F3F5FC;
-    border-color: #1e5ba5;
+    background-color: var(--off-white);
+    border-color: var(--roxo);
     width: 200px;
     height: 40px;
 }
 
 /*parte mobile*/
 @media screen and (max-width: 768px) {
+
+    body {
+        width: 50%;
+        height: 80%;
+    }
+
+    /* header {
+        display: grid;
+        margin: 0.4rem;
+        margin-left: 0.5rem;
+    } */
 
     .container {
         display: flex;
@@ -103,24 +124,25 @@ header {
         align-items: center;
         width: auto;
         height: auto;
+        margin-left: 0;
     }
 
     .container-box {
-        width: 100%;
+        width: 80%;
         height: 50%;
     }
 
     .container-box-input-texto {
         width: auto;
-        padding: 10%;
+        padding: 0.1rem;
     }
 
     .container-box-mensagem {
-        margin-top: 5%;
+        margin-top: 0.5rem;
     }
 
     .container-box-mensagem-copiar {
-        padding: 10%;
+        padding: 1rem;
         min-height: 250px;
     }
 }
