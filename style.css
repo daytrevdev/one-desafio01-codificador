@@ -1,10 +1,9 @@
 :root {
-    --off-white: #F2F2F2;
+    --off-white: #F3F5FC;
     --roxo: #7030A0;
     --lilas: #E2CBF1;
     --cinza-claro: #B0B0B0;
     --cinza-escuro: #4D4D4D;
-    --azul-escuro: #0A3871;
 }
 
 * {
@@ -12,7 +11,7 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 150%;
-    color: var(--azul-escuro);
+    color:var(--roxo);
     border-radius: 15px;
 }
 
@@ -20,30 +19,27 @@ body {
     background-color: var(--lilas);
 }
 
-header {
+.logo {
     float: left;
+    clear: both;
     margin: 0.5rem;
-    margin-left: 1.5rem;
+    margin-left: 0.8rem;
 }
 
 .container {
     display: flex;
     justify-content: space-around;
-    margin-left: 0.1rem;
     width: auto;
     height: 100%;
 }
 
 .container-box-input {
-    height: 100%;
-    margin-top: 2.5rem;
-    margin-right: 0.4rem;
-    margin-bottom: 0;
+    margin-top: 4rem;
+    margin-right: 0.5rem;
 }
 
 .container-box-input-texto {
-    margin-top: 0;
-    padding: 2.3rem;
+    padding: 20px;
     background-color: var(--lilas);
     border: none;
 }
@@ -57,7 +53,7 @@ header {
 .container-box-input-buttons {
     display: flex;
     justify-content: space-around;
-    margin-top: 0.1rem;
+    margin-top: 1rem;
     flex-basis: auto;
 }
 
@@ -79,20 +75,19 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    margin-top: 0;
+    justify-content: flex-end;
     width: auto;
 }
 
 .container-box-mensagem-copiar {
-    padding: 2rem;
+    flex-grow: 1;
+    padding: 30px;
     border: none;
-    background-color: var(--off-white);
     background-image: url("/images/nenhuma-mensagem.png");
     background-repeat: no-repeat;
     background-position: 18px;
     background-size: 200px;
-    height: 100%;
+    height: 70%;
 }
 
 #container-box-mensagem-button-btcopiar {
@@ -103,18 +98,8 @@ header {
 }
 
 /*parte mobile*/
-@media screen and (max-width: 768px) {
 
-    body {
-        width: 50%;
-        height: 80%;
-    }
-
-    /* header {
-        display: grid;
-        margin: 0.4rem;
-        margin-left: 0.5rem;
-    } */
+@media screen and (max-width: 730px) {
 
     .container {
         display: flex;
@@ -122,27 +107,29 @@ header {
         flex-wrap: wrap;*/
         flex-flow: column wrap;
         align-items: center;
-        width: auto;
+        width: 100vw;
         height: auto;
-        margin-left: 0;
     }
 
-    .container-box {
-        width: 80%;
-        height: 50%;
-    }
+    .container-box-input {
+        flex-shrink: 3;
+        margin-top: 1rem;
+    }    
 
     .container-box-input-texto {
         width: auto;
-        padding: 0.1rem;
+        padding: 2rem;
     }
 
     .container-box-mensagem {
-        margin-top: 0.5rem;
+        margin-top: 2rem;
     }
 
     .container-box-mensagem-copiar {
         padding: 1rem;
+        /* flex-grow: 1; */
         min-height: 250px;
+        max-height: 100vh;
+        height: 50vh;
     }
 }
